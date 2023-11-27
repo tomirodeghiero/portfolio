@@ -18,7 +18,7 @@ import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['Frontend', 'Backend', 'Full Stack'];
+const disciplines = ['Software', 'Frontend', 'Backend', 'Full Stack'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -83,10 +83,11 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
-        buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        proyect="Sophilum"
+        title="Creative and Professional Lighting"
+        description="Designing a unique lighting experience, combining technology and design to transform spaces."
+        buttonText="View E-commerce"
+        buttonLink="https://www.sophilum.com"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
@@ -104,10 +105,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        proyect="Etendo Time Tracking"
+        title="Streamlining Worklog Management built with React Native"
+        description="A specialized time tracking application tailored for Futit Services, Etendo Time Tracking efficiently manages employee worklogs."
+        buttonText="View proyect"
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -128,9 +129,10 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
+        proyect="Joyas Boulevard"
+        title="A Symphony of Luxury and Artistry"
+        description="Joyas Boulevard offers a unique jewelry shopping experience, renowned for its elegance and innovative design."
+        buttonText="View website"
         buttonLink="/projects/slice"
         model={{
           type: 'laptop',

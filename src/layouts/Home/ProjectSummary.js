@@ -21,6 +21,7 @@ export const ProjectSummary = ({
   sectionRef,
   index,
   title,
+  proyect,
   description,
   model,
   buttonText,
@@ -68,6 +69,15 @@ export const ProjectSummary = ({
         </span>
       </div>
       <Heading
+        level={2}
+        as="h2"
+        className={styles.proyect}
+        data-visible={visible}
+        id={titleId}
+      >
+        {proyect}
+      </Heading>
+      <Heading
         level={3}
         as="h2"
         className={styles.title}
@@ -91,7 +101,7 @@ export const ProjectSummary = ({
     <div className={styles.preview}>
       {model.type === 'laptop' && (
         <>
-          {renderKatakana('laptop', visible)}
+          {/* {renderKatakana('laptop', visible)} */}
           <div className={styles.model} data-device="laptop">
             <Model
               alt={model.alt}
@@ -113,7 +123,7 @@ export const ProjectSummary = ({
       )}
       {model.type === 'phone' && (
         <>
-          {renderKatakana('phone', visible)}
+          {/* {renderKatakana('phone', visible)} */}
           <div className={styles.model} data-device="phone">
             <Model
               alt={model.alt}

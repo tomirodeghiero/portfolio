@@ -11,7 +11,8 @@ import { NavToggle } from './NavToggle';
 import styles from './Navbar.module.css';
 import { ThemeToggle } from './ThemeToggle';
 import { navLinks, socialLinks } from './navData';
-import Logotype from 'assets/logotype.png';
+import LogotypeLight from 'assets/logotype.png';
+import LogotypeDark from 'assets/logotype-dark.png';
 import Image from 'next/image';
 
 export const Navbar = () => {
@@ -149,10 +150,11 @@ export const Navbar = () => {
           onClick={handleMobileNavClick}
         >
           <Image
-            src={Logotype}
+            src={themeId === 'dark' ? LogotypeDark : LogotypeLight}
             alt="Tomás Rodeghiero Logotype"
-            width={180}
-            height={180}
+            style={{ borderRadius: '0.5rem' }}
+            width={250}
+            height={250}
           />
         </a>
       </RouterLink>

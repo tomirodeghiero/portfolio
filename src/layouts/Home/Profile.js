@@ -30,7 +30,7 @@ const ProfileText = ({ visible, titleId }) => (
       projects and products lies in cohesive and dynamic teams collaborating,
       experimenting, and learning together fuels my commitment to collective success.
       
-      If you’re interested in the tools and software I use check out my <Link href="/uses">uses page</Link>.
+      {/* If you’re interested in the tools and software I use check out my <Link href="/uses">uses page</Link>. */}
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I'm always keen to explore new opportunities and ideas, so feel free to reach out if
@@ -63,7 +63,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="/contact"
+                href="https://wa.me/5493586020441"
                 icon="send"
               >
                 Send me a message
@@ -90,16 +90,6 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
                   alt="Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
                 />
-                <svg
-                  aria-hidden="true"
-                  width="135"
-                  height="765"
-                  viewBox="0 0 135 765"
-                  className={styles.svg}
-                  data-visible={visible}
-                >
-                  <use href={`${profileKatakana}#katakana-profile`} />
-                </svg>
               </div>
             </div>
           </div>
