@@ -133,7 +133,6 @@ export const Home = () => {
         title="A Symphony of Luxury and Artistry"
         description="Joyas Boulevard offers a unique jewelry shopping experience, renowned for its elegance and innovative design."
         buttonText="View website"
-        buttonLink="/projects/slice"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
