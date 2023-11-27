@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://hamishw.com",
   "description": "Portfolio site for Tomás Rodeghiero",
   "author": "Tomás Rodeghiero",
   "devDependencies": {

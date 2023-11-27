@@ -1,4 +1,3 @@
-import profileKatakana from 'assets/katakana-profile.svg?url';
 import profileImgLarge from 'assets/profile-large.jpg';
 import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
 import profileImg from 'assets/profile.jpg';
@@ -23,18 +22,17 @@ const ProfileText = ({ visible, titleId }) => (
 
     {/* prettier-ignore */}
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I currently serve as a Software Developer at <Link href="https://futitservices.com">Futit Services</Link>, 
+      I currently work as a Software Developer at <Link href="https://futitservices.com">Futit Services</Link>, 
       where I blend my frontend expertise with backend know-how to create seamless digital experiences.
-      Alongside my professional work, I'm furthering my education at the National
+      Alongside my professional work, I&apos;m furthering my education at the National
       University of Río Cuarto. I firmly believe that the cornerstone of extraordinary
       projects and products lies in cohesive and dynamic teams collaborating,
       experimenting, and learning together fuels my commitment to collective success.
-      
-      {/* If you’re interested in the tools and software I use check out my <Link href="/uses">uses page</Link>. */}
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I'm always keen to explore new opportunities and ideas, so feel free to reach out if
-      you'd like to discuss potential collaborations or simply share your thoughts!
+      I&apos;m always keen to explore new opportunities and ideas, so feel free to reach
+      out if you&apos;d like to discuss potential collaborations or simply share your
+      thoughts!
     </Text>
   </Fragment>
 );

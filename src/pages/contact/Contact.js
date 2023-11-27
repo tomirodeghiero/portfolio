@@ -23,46 +23,6 @@ export const Contact = () => {
   const [complete, setComplete] = useState(false);
   const [statusError, setStatusError] = useState('');
   const initDelay = tokens.base.durationS;
-
-  const onSubmit = async event => {
-    event.preventDefault();
-    setStatusError('');
-
-    if (sending) return;
-
-    try {
-      setSending(true);
-
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email.value,
-          message: message.value,
-        }),
-      });
-
-      const responseMessage = await response.json();
-
-      const statusError = getStatusError({
-        status: response?.status,
-        errorMessage: responseMessage?.error,
-        fallback: 'There was a problem sending your message',
-      });
-
-      if (statusError) throw new Error(statusError);
-
-      setComplete(true);
-      setSending(false);
-    } catch (error) {
-      setSending(false);
-      setStatusError(error.message);
-    }
-  };
-
   return (
     <Section className={styles.contact}>
       <Meta
@@ -71,7 +31,7 @@ export const Contact = () => {
       />
       <Transition unmount in={!complete} timeout={1600}>
         {(visible, status) => (
-          <form className={styles.form} method="post" onSubmit={onSubmit}>
+          <form className={styles.form} method="post">
             <Heading
               className={styles.title}
               data-status={status}
