@@ -10,6 +10,13 @@ import sliceTexture from 'assets/slice-app.jpg';
 import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
+import dpastelTextureLarge from 'assets/dpastel-large.jpg';
+import dpastelTexturePlaceholder from 'assets/dpastel-placeholder.jpg';
+import dpastelTexture from 'assets/dpastel.jpg';
+import bricchiTextureLarge from 'assets/bricchi-large.jpg';
+import bricchiTexturePlaceholder from 'assets/bricchi-placeholder.jpg';
+import bricchiTexture from 'assets/bricchi.jpg';
+
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -27,10 +34,12 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
+  const projectFive = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, projectFive, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -87,7 +96,7 @@ export const Home = () => {
         title="Creative and Professional Lighting"
         description="Designing a unique lighting experience, combining technology and design to transform spaces."
         buttonText="View E-commerce"
-        buttonLink="https://www.sophilum.com"
+        buttonLink="https://sophilum.vercel.app"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
@@ -140,6 +149,49 @@ export const Home = () => {
             {
               srcSet: [sliceTexture, sliceTextureLarge],
               placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        proyect="D-pastel"
+        title="Lighting that Transforms Your Spaces with a Personalized Touch"
+        description="Arte Luz specializes in illuminating your spaces with a personalized touch. We offer decorative and functional lighting solutions, transforming every corner of your home or business with unique, handcrafted designs."
+        buttonText="View website"
+        buttonLink="https://www.artedpastel.com"
+        model={{
+          type: 'laptop',
+          alt: 'D-pastel website',
+          textures: [
+            {
+              srcSet: [dpastelTexture, dpastelTextureLarge],
+              placeholder: dpastelTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-5"
+        alternate
+        sectionRef={projectFive}
+        visible={visibleSections.includes(projectFive.current)}
+        index={5}
+        proyect="Bricchi Hnos."
+        title="Farming Tools and Machinery"
+        description="Bricchi Hnos. offers high-quality farming equipment, featuring a wide range of products for efficient agricultural work."
+        buttonText="View website"
+        buttonLink="https://www.bricchihnos.com"
+        model={{
+          type: 'laptop',
+          alt: 'Bricchi Hnos. website',
+          textures: [
+            {
+              srcSet: [bricchiTexture, bricchiTextureLarge],
+              placeholder: bricchiTexturePlaceholder,
             },
           ],
         }}
